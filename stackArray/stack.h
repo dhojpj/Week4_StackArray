@@ -213,9 +213,10 @@ template<typename R>
 istream& operator>>(istream& in, stack<R> &s)
 {
     node<R> newNode;
-//    while(in>>newNode) // streaming in into newNode
-    in >> newNode.setData();
-//        s<<newNode.getData(); // streaming newNode data into object s
+
+//    while(in>>newNode && !s.full()) // streaming in into newNode
+    in >> newNode.data;
+        s<<newNode.getData(); // streaming newNode data into object s
     return in; // getting object back to use it again (for chaining multiple objects cin >> a >> b >> c)
 }
 

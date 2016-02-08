@@ -56,11 +56,12 @@ public:
     template<typename R>
     friend istream& operator>>(istream& in, node<T> &d);
 
-    T data;
-    node<T>* ptr;
 
 
 private:
+    T data;
+    node<T>* ptr;
+
 
     void copy(const node<T>& other)
     {
@@ -87,7 +88,7 @@ istream& operator>>(istream& in, node<R> &n)
 
 
 
-        in >> n.setData();
+        in >> n.data;
         n.ptr = NULL;
     }
     //    in >> n;

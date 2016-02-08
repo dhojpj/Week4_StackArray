@@ -9,5 +9,6 @@ SOURCES += \
 HEADERS += \
     node.h \
     stack.h \
-    stackArray.h
+    stackArray.h \
+    linkedList.h
 
